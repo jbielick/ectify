@@ -1,29 +1,29 @@
 {
   "name": "ectify",
-  "version": "0.8.0",
-  "description": "Browserify transform for pre-compiled Underscore and Lo-Dash templates (with HTML minification)",
+  "version": "0.1.0",
+  "description": "browserify transformer for precompiling ECT templates",
   "keywords": [
     "template",
     "browserify",
     "browserify-transform",
     "transform",
-    "minifier",
-    "minify",
-    "underscore",
-    "lodash"
+    "coffeescript",
+    "ECT",
+    "browser"
   ],
-  "homepage": "https://github.com/zertosh/jstify",
-  "author": "Andres Suarez <zertosh@gmail.com>",
-  "bugs": "https://github.com/zertosh/jstify/issues",
+  "homepage": "https://github.com/jbielick/ectify",
+  "author": "Josh Bielick <jbielick@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/jbielick/ectify/issues"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/zertosh/jstify.git"
+    "url": "git://github.com/jbielick/ectify.git"
   },
   "dependencies": {
     "ect": "^0.5.9",
     "ejs": "^2.3.1",
-    "html-minifier": "^0.6.8",
     "through2": "^0.6.3"
   },
   "devDependencies": {
@@ -35,6 +35,10 @@
     "node": ">=0.10"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "./node_modules/tape/bin/tape test/*.js"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
   }
 }
