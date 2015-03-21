@@ -4,9 +4,9 @@ var path    = require('path');
 var ECT     = require('ect');
 var ejs     = require('ejs');
 var fs      = require('fs');
-var template = ejs.compile(fs.readFileSync('./template.ejs').toString());
+var template = ejs.compile(fs.readFileSync(__dirname + '/template.ejs').toString());
 var through = require('through2');
-var renderer = ECT();
+var renderer;
 
 var templateExtension = /\.(ect|html)$/;
 
@@ -14,7 +14,7 @@ function precompile(source) {
   return renderer.compile(source).toString().replace(/\n/g, '');
 }
 
-function build(source) {
+function build(source, options) {
   return template({precompiled: precompile(source)});
 }
 
@@ -31,7 +31,7 @@ function ectify(file, options) {
 
   function end(next) {
     var str = Buffer.concat(buffers).toString();
-    var precompiled;
+    renderer = ECT(options);
 
     try {
       this.push(build(str, options));

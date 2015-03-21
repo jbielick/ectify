@@ -1,13 +1,9 @@
-(function(ECT) {
+var ect = require('ect')({
+  root: {
+    template: '(' + <%- precompiled.toString() %> + ');'
+  }
+});
 
-  var ect = ECT({
-    root: {
-      template: '(' + <%- precompiled.toString() %> + ');'
-    }
-  });
-
-  module.exports = function(data) {
-    return ect.render('template', data);
-  };
-
-})(require('ect.min'));
+module.exports = function(data) {
+  return ect.render('template', data);
+};

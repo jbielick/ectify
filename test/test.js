@@ -1,6 +1,5 @@
 'use strict';
 
-var ECT = require('ect');
 var concat = require('concat-stream');
 var fs = require('fs');
 var path = require('path');
@@ -23,7 +22,7 @@ test('ectify', function(t) {
 
   function loadAsModule(source) {
     var context = {
-      require: function(name) {return require('./bower_components/ect/ect.min')},
+      require: function(name) {return require('./ect.min')},
       module: {},
       console: console
     };
