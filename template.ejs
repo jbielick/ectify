@@ -1,0 +1,13 @@
+(function(ECT) {
+
+  var ect = ECT({
+    root: {
+      template: '(' + <%- precompiled.toString() %> + ');'
+    }
+  });
+
+  module.exports = function(data) {
+    return ect.render('template', data);
+  };
+
+})(require('ect.min'));

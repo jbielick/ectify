@@ -1,0 +1,42 @@
+{
+  "name": "ect",
+  "main": "lib/ect.js",
+  "homepage": "https://github.com/baryshev/ect",
+  "authors": [
+    "Vadim M. Baryshev <vadimbaryshev@gmail.com>"
+  ],
+  "description": "CoffeeScript template engine",
+  "moduleType": [
+    "amd",
+    "node"
+  ],
+  "keywords": [
+    "template",
+    "coffeescript",
+    "coffee-script",
+    "ect"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "bin",
+    "examples",
+    "index.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "coffee-script": ">= 1.5.0"
+  },
+  "_release": "0edfa8c428",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "0edfa8c4283153128363b53878e1bbdc4e6211c5"
+  },
+  "_source": "git://github.com/baryshev/ect.git",
+  "_target": "*",
+  "_originalSource": "ect",
+  "_direct": true
+}
