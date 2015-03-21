@@ -1,4 +1,4 @@
-jstify
+ectify
 ======
 
 `ectify` is a [Browserify](https://github.com/substack/node-browserify) transformer for creating modules of pre-compiled [ECT](https://github.com/baryshev/ect) templates.
@@ -50,7 +50,7 @@ Template source:
 </div>
 ```
 
-Compiled minification:
+Compiled:
 ```js
 var ect = require('ect')({
   root: {
