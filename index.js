@@ -14,8 +14,11 @@ function precompile(source) {
   return renderer.compile(source).toString().replace(/\n/g, '');
 }
 
-function build(source, options) {
-  return template({precompiled: precompile(source)});
+function build(file, source, options) {
+  return template({
+    precompiled: precompile(source),
+    name: path.relative(process.cwd(), file).replace('.', '_')
+  });
 }
 
 function ectify(file, options) {
@@ -34,7 +37,7 @@ function ectify(file, options) {
     renderer = ECT(options);
 
     try {
-      this.push(build(str, options));
+      this.push(build(file, str, options));
     } catch(e) {
       return this.emit('error', e);
     }

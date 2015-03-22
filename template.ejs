@@ -1,9 +1,9 @@
 var ect = require('ect')({
   root: {
-    template: '(' + <%- precompiled.toString() %> + ');'
+    '<%= name %>': '(' + <%- precompiled.toString() %> + ');'
   }
 });
 
 module.exports = function(data) {
-  return ect.render('template', data);
+  return ect.render('<%= name %>', data);
 };
